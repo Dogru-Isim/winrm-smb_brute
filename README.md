@@ -20,10 +20,10 @@ Example:
 ### Verbosity options
 
 If not given: default
-![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/default_verb.png)
+![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/default_verb.png?raw=true)
 
 If "-v": verbose
-![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/verbose_verb.png)
+![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/verbose_verb.png?raw=true)
 
 If "-q": quiet
-![quiet verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/quiet_verb.png)
+![quiet verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/quiet_verb.png?raw=true)
