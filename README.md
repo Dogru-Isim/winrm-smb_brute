@@ -23,7 +23,7 @@ If not given: default
 ![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/default_verb.png?raw=true)
 
 If "-v": verbose
-![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/verbose_verb.png?raw=true)
+![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/vebrose_verb.png?raw=true)
 
 If "-q": quiet
-![quiet verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/quiet_verb.png?raw=true)
+![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/tree/main/img/quiet_verb.png?raw=true)
