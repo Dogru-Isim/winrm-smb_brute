@@ -17,13 +17,13 @@ Example:
   winrm-smb_brute.py smb comp1.example.com
 ```
 
-### Verbosity options
+## Verbosity options
 
-If not given: default
+### Not given: default
 ![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/default_verb.png?raw=true)
 
-If "-v": verbose
+### "-v": verbose
 ![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/vebrose_verb.png?raw=true)
 
-If "-q": quiet
-![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/quiet_verb.png?raw=true)
+### "-q": quiet
+![quiet verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/quiet_verb.png?raw=true)
