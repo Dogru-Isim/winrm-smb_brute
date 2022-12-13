@@ -6,6 +6,7 @@ A tool for faster winrm/smb bruteforce. (No threading though, sorry...)
 pip3 install -r requirements.txt
 ```
 
+**How to use:**
 ```shell
 Usage:  
 
