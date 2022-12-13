@@ -26,6 +26,4 @@ Example:
 ![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/vebrose_verb.png?raw=true)
 
 ### "-q": quiet
-![quiet verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/quiet_verb.png?raw=true)
-
 ![quiet verb](https://user-images.githubusercontent.com/96004353/207186056-647c0748-7d15-4cff-8255-e89fef2482f6.png)
