@@ -24,6 +24,7 @@ Example:
 ```
 
 ## Verbosity options
+**Note: The more verbose it is, the slower it gets.**
 
 ### Not given: default
 ![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/default_verb.png?raw=true)
