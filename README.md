@@ -23,7 +23,7 @@ Example:
 ![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/default_verb.png?raw=true)
 
 ### "-v": verbose
-![verbose verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/vebrose_verb.png?raw=true)
+![default verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/verbose_verb.png?raw=true)
 
 ### "-q": quiet
-![quiet verb](https://user-images.githubusercontent.com/96004353/207186056-647c0748-7d15-4cff-8255-e89fef2482f6.png)
+![quiet verb](https://github.com/Dogru-Isim/winrm-smb_brute/blob/main/img/quiet_verb.png?raw=true)
