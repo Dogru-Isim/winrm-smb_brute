@@ -1,6 +1,11 @@
 # winrm-smb_brute
 A tool for faster winrm/smb bruteforce. (No threading though, sorry...)
 
+**Installing required python modules:**
+```shell
+pip3 install -r requirements.txt
+```
+
 ```shell
 Usage:  
 
