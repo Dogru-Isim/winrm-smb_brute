@@ -82,23 +82,22 @@ def read_users_and_passwords(user_file, password_file):
   return users, passwords
 
 def print_help():
-  if len(sys.argv) < 5:
-    print("""
-    Usage:  
-      protocol:  smb (smb authentication over 445)
-                 winrm (winrm authentication, runs `ipconfig` to confirm authentication)
+  print("""
+  Usage:  
+    protocol:  smb (smb authentication over 445)
+               winrm (winrm authentication, runs `ipconfig` to confirm authentication)
 
-      verbosity: -q (quiet, no output)
-                 -v (verbose)
-                 not given (default verbosity)
+    verbosity: -q (quiet, no output)
+               -v (verbose)
+               not given (default verbosity)
 
-      winrm-smb_brute.py <protocol> <ip>OR<fqdn> <users_file> <pass_file> <(opt)verbosity>
+    winrm-smb_brute.py <protocol> <ip>OR<fqdn> <users_file> <pass_file> <(opt)verbosity>
 
-    Example:
-      winrm-smb_brute.py smb comp1.example.local users.txt passwords.txt -v
-          """)
+  Example:
+    winrm-smb_brute.py smb comp1.example.local users.txt passwords.txt -v
+        """)
 
-    sys.exit(0)
+  sys.exit(0)
 
 def decide_verbosity():
   verbosity = "default"
@@ -111,6 +110,8 @@ def decide_verbosity():
   return verbosity
 
 def get_args():
+  if len(sys.argv) < 5:
+    print_help()
   protocol = sys.argv[1]
   ip = sys.argv[2]
   user_file = sys.argv[3]
@@ -121,7 +122,6 @@ def get_args():
 
 def main():
   protocol, ip, user_file, password_file, port = get_args()
-  print_help()
   connection = verify_connection(ip, port)
   verbosity = decide_verbosity()
 
