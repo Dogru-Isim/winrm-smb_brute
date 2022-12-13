@@ -122,7 +122,7 @@ def get_args():
 
 def main():
   protocol, ip, user_file, password_file, port = get_args()
-  connection = verify_connection(ip, port)
+  verify_connection(ip, port)
   verbosity = decide_verbosity()
 
   if verbosity == "quiet":
