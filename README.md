@@ -11,7 +11,7 @@ pip3 install -r requirements.txt
 Usage:  
 
   protocol:  smb (smb authentication over 445)
-             winrm (winrm authentication, runs `ipconfig` to confirm authentication)
+             winrm (winrm authentication, runs `hostname` to confirm authentication)
 
   verbosity: -q (quiet, no output)
              -v (verbose)
